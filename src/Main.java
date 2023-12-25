@@ -7,13 +7,13 @@ public class Main {
         boolean negative = false;
 
         for (double number : arrayDouble){
-            if (number <= 0) {
+            if (! negative && number < 0) {
                 negative = true;
             }
-            if (negative && number >= 0){
+            if (negative && number > 0){
+                sum += number;
                 count ++;
             }
-            sum += number;
         }
         System.out.println(sum / count);
     }
